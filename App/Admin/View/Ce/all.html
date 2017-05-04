@@ -1,0 +1,53 @@
+<extend name="Public:header"/>
+<block name="menu">
+    <ul>
+      <li><a href="__MODULE__/Index.html" ><i class="fa fa-home fa-fw"></i>院校管理</a></li>
+      <li><a href="__MODULE__/Users/Index.html" ><i class="fa fa-bar-chart fa-fw"></i>用户管理</a></li>
+      <li><a href="__MODULE__/Goods/Index.html"><i class="fa fa-database fa-fw"></i>商品管理</a></li>
+      <li><a href="__MODULE__/Links/Index.html" class="active"><i class="fa fa-map-marker fa-fw"></i>认证管理</a></li>
+     <li><a href="__MODULE__/Login/loginout.html" class="active"><i class="fa fa-users fa-fw"></i>退出登录</a></li>
+    </ul> 
+  </block>
+  <block name="content">
+   <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-6 col-md-6">
+              <ul class="text-uppercase">
+                <li><a href="__MODULE__/Ce/index.html">审核认证</a></li>
+                <li><a href="__MODULE__/Ce/all.html" class="active">查看所有</a></li>
+              </ul>  
+            </nav> 
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-1"></div>
+          <div class="col-md-8"> 
+                  <form action="" class="templatemo-login-form">
+                    <table class="table table-striped table-bordered templatemo-user-table">
+                  <thead>
+                    <tr>
+                      <td>ID </td>
+                      <td>用户名</td>
+                      <td>认证图片</td>
+                      <td>编辑</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>John</td>
+                      <td>Smith</td>
+                      <td>
+                        <a href="">审核</a>|
+                        <a href="">编辑</a>|
+                        <a href="">删除</a>
+                      </td>
+                    </tr>
+、                </tbody>
+              </table> 
+              </form>
+              </div> 
+        </div>   
+  </div>
+</block>

@@ -1,0 +1,65 @@
+<extend name="Public:header"/>
+  <block name="menu">
+    <ul>
+      <li><a href="__MODULE__/Index.html" ><i class="fa fa-home fa-fw"></i>院校管理</a></li>
+      <li><a href="__MODULE__/Users/Index.html" class="active"><i class="fa fa-bar-chart fa-fw"></i>用户管理</a></li>
+      <li><a href="__MODULE__/Goods/Index.html"><i class="fa fa-database fa-fw"></i>商品管理</a></li>
+      <li><a href="__MODULE__/Ce/Index.html"><i class="fa fa-map-marker fa-fw"></i>认证管理</a></li>
+      <li><a href="__MODULE__/Links/Index.html"><i class="fa fa-users fa-fw"></i>友情链接</a></li>
+    </ul> 
+  </block>
+  <block name="content">
+    <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-6 col-md-6">
+              <ul class="text-uppercase">
+               <li><a href="__MODULE__/Users/index.html">查看</a></li>
+                <li><a href="__MODULE__/Users/add.html" class="active">添加用户</a></li>
+              </ul>  
+            </nav> 
+          </div>
+        </div>
+        <div class="panel-body">
+
+          <div class="container">
+            <div class="col-md-1"></div>   
+              <div class="col-md-4">
+              <!-- 添加用户 -->
+                  <form action="__MODULE__/Users/add.html" method="post" class="templatemo-login-form">             
+                      <label for="name"></label>
+                      <input type="text" class="form-control" name="nickname" id="name" placeholder="用户名">
+					  <label for="name"></label>
+                      <input type="text" class="form-control" name="email" id="name" placeholder="邮箱">
+                      <label for="pass"></label>
+					  <input type="text" class="form-control" name="phone" id="name" placeholder="手机号">
+                      <label for="pass"></label>
+                      <input type="password" class="form-control" name="passwd" id="pass" placeholder="密码">         
+                    <div class="form-group">
+                      <label for="repass"></label>
+                      <input type="password" class="form-control" name="repasswd" id="repass" placeholder="确认密码">
+                    </div> 
+                    <div class="form-group">
+                      <select class="form-control" name="school_id">
+					  <foreach name="school" item="vol">
+                        <option value="{$vol.id}">{$vol.name}</option>
+					  </foreach>
+                      </select>
+                    </div>     
+                    <div class="form-group">
+                      <select class="form-control" name="type">
+                        <option value="1">管理员</option>
+                        <option value="0">普通用户</option>                 
+                      </select>
+                    </div>        
+                    <div class="form-group">
+                      <button type="submit" name="sub" value="true" class="templatemo-blue-button">添加</button>
+                    </div>
+                  </form>
+            </div>
+           
+            </div>
+        </div>   
+  </div>
+  
+</block>

@@ -1,0 +1,73 @@
+<extend name="Public:header"/>
+<block name="menu">
+    <ul>
+      <li><a href="__MODULE__/Academy/Index.html" class="active"><i class="fa fa-home fa-fw"></i>院校管理</a></li>
+      <li><a href="__MODULE__/Users/Index.html"><i class="fa fa-bar-chart fa-fw"></i>用户管理</a></li>
+      <li><a href="__MODULE__/Goods/Index.html"><i class="fa fa-database fa-fw"></i>商品管理</a></li>
+      <li><a href="__MODULE__/Ce/Index.html"><i class="fa fa-map-marker fa-fw"></i>认证管理</a></li>
+      <li><a href="__MODULE__/Login/loginout.html"><i class="fa fa-users fa-fw"></i>退出登录</a></li>
+    </ul> 
+  </block>
+<block name="content">
+   <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-6 col-md-6">
+              <ul class="text-uppercase">
+                <li><a href="__MODULE__/Academy/add.html" >添加院校</a></li>
+                <li><a href="__MODULE__/Academy/index.html" class="active">查看</a></li>
+              </ul>  
+            </nav> 
+            <div class="nav-search" id="nav-search">
+              <form class="form-search">
+                <span class="input-icon">
+                  <input type="text" placeholder="搜索" name="name" class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                  <input type="submit" class="btn btn-primary btn-xs" value="搜索" style="border-radius:3px; height:26px; margin-top:-4px; padding-right:24px;">
+                </span>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+              <table class="table table-striped table-bordered templatemo-user-table">
+                <thead>
+                    <tr>
+                      <td>ID </td>
+                      <td>校区</td>
+                      <td>院校名</td>
+                      <td>
+                       编辑
+                      </td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <foreach name="data" item="school">
+                    <tr>
+                      <td>{$school.id}</td>
+                      <td>
+                      <switch name="school.pid">
+                        <case value="0">张家界校区</case>
+                        <case value="1">吉首校区</case>
+                        <default />张家界学院
+                      </switch>
+                      </td>
+                      <td>{$school.name}</td>
+                      <td>
+                        <a href="__MODULE__/Academy/del/id/{$school.id}">删除</a>|
+                        <a href="__MODULE__/Academy/edit/id/{$school.id}">修改</a>
+                      </td>
+                    </tr>
+                  </foreach>  
+                  <tr>
+                   <td  align="center" colspan="4">{$page}</td>
+                  </tr>       
+                </tbody>
+                
+              </table> 
+            </div> 
+        </div> 
+               
+      </div>
+</block>

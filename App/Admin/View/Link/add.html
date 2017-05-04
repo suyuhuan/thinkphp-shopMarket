@@ -1,0 +1,43 @@
+<extend name="Public:header"/>
+<block name="menu">
+    <ul>
+      <li><a href="__MODULE__/Index.html" ><i class="fa fa-home fa-fw"></i>院校管理</a></li>
+      <li><a href="__MODULE__/Users/Index.html" ><i class="fa fa-bar-chart fa-fw"></i>用户管理</a></li>
+      <li><a href="__MODULE__/Goods/Index.html"><i class="fa fa-database fa-fw"></i>商品管理</a></li>
+      <li><a href="__MODULE__/Ce/Index.html" ><i class="fa fa-map-marker fa-fw"></i>认证管理</a></li>
+      <li><a href="__MODULE__/Login/loginout.html" class="active"><i class="fa fa-users fa-fw"></i>退出登录</a></li>
+    </ul> 
+  </block>
+  <block name="content">
+   <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-6 col-md-6">
+              <ul class="text-uppercase">
+                <li><a href="__MODULE__/Link/Index.html" class="active">查看链接</a></li>
+                <li><a href="__MODULE__/Link/add.html">添加链接</a></li>
+              </ul>  
+            </nav> 
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+                  <form action="" class="templatemo-login-form">
+                    <div class="form-group">
+                      <label for="name">链接名</label>
+                      <input type="text" class="form-control" name="school" id="name" placeholder="链接名">
+                    </div> 
+                    <div class="form-group">
+                      <label for="name">URL</label>
+                      <input type="text" class="form-control" name="school" id="name" placeholder="URL">
+                    </div>  
+                   
+                    <div class="form-group">
+                      <button type="submit" class="templatemo-blue-button">添加</button>
+                    </div>
+                  </form>
+          </div> 
+        </div>   
+  </div>
+</block>

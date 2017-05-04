@@ -1,0 +1,25 @@
+<extend name="ziliao"/>
+<block name="con">
+<div class="panel panel-default" >
+           <ul class="nav nav-tabs nav-justified">
+              <li><a href="ziliao.html">个人资料</a></li>
+               <li class="active"><a href="fabu.html">发布的商品</a></li>
+               <li><a href="message.html">消息中心</a></li>
+               <li><a href="ce.html">认证信息</a></li>
+            </ul>
+         
+            <table class="table table-striped table-bordered templatemo-user-table">
+                <tbody>
+                      <foreach name="goodData" item="vol">
+                    <tr align="center">
+                      <td><a href="__MODULE__/Goods/goodsInfo/id/{$vol.id}"><img style="width:50px;height:50px;"src="__PUBLIC__/{$vol.good_imgs}" alt=""></a></td>
+                      <td><a href="">{$vol.title}</a></td>
+                      <td>{:date('Y-m-d',$vol['time'])}</td>
+                      <td>{$vol.detail}</td>
+                    </tr>
+               </foreach>                    
+                </tbody>
+            </table>
+          
+         </div>
+</block>

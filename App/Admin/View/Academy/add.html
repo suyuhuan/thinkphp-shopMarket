@@ -1,0 +1,44 @@
+<extend name="Public:header"/>
+<block name="menu">
+    <ul>
+      <li><a href="__MODULE__/Academy/Index.html" class="active"><i class="fa fa-home fa-fw"></i>院校管理</a></li>
+      <li><a href="__MODULE__/Users/Index.html"><i class="fa fa-bar-chart fa-fw"></i>用户管理</a></li>
+      <li><a href="__MODULE__/Goods/Index.html"><i class="fa fa-database fa-fw"></i>商品管理</a></li>
+      <li><a href="__MODULE__/Ce/Index.html"><i class="fa fa-map-marker fa-fw"></i>认证管理</a></li>
+      <li><a href="__MODULE__/Login/loginout.html" class="active"><i class="fa fa-users fa-fw"></i>退出登录</a></li>
+    </ul> 
+  </block>
+<block name="content">
+   <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-6 col-md-6">
+              <ul class="text-uppercase">
+                <li><a href="__MODULE__/Academy/add.html" class="active">添加院校</a></li>
+                <li><a href="__MODULE__/Academy/index.html">查看</a></li>
+              </ul>  
+            </nav> 
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
+                  <form action="__ACTION__/" method="post" class="templatemo-login-form">
+                    <div class="form-group">
+                      <label for="name">添加院校</label>
+                      <input type="text" class="form-control" name="name" id="name" placeholder="输入院校名">
+                    </div>  
+                    <div class="form-group">
+                      <select class="form-control" name="pid">
+                        <option value="0">张家界校区</option>
+                        <option value="1">吉首校区</option>
+                      </select>
+                    </div>        
+                    <div class="form-group">
+                      <button type="submit" name="sub" value="添加" class="templatemo-blue-button">添加</button>
+                    </div>
+                  </form>
+          </div> 
+        </div>   
+      </div>
+</block>

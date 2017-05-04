@@ -1,0 +1,73 @@
+<extend name="ziliao"/>
+<block name="con">
+<if condition="$ceInfo">
+  <div class="panel panel-default" >
+           <ul class="nav nav-tabs nav-justified">
+              <li><a href="ziliao.html">个人资料</a></li>
+               <li><a href="fabu.html">发布的商品</a></li>
+               <li><a href="message.html">消息中心</a></li>
+               <li class="active"><a href="ce.html">认证信息</a></li>
+            </ul>
+         <form action="__MODULE__/User/ce" method="post" enctype="multipart/form-data">
+          <table class="table">
+                  <tr>
+                     <td width="379px" align="right">真实姓名：</td> 
+                     <td>{$ceInfo.name}</td>            
+                  </tr>
+                  <tr>
+                    <td align="right">学生学号：</td>
+                    <td>{$ceInfo.stuId}</td>
+                  </tr>
+                    <tr>
+                      <td align="right">上传学生证图片</td>
+                      <td><img width="80px" height="80px" src="__PUBLIC__{$ceInfo.image}"></td>
+                    </tr>
+                    <if condition="$ceInfo.type eq 0">
+                      <td></td>
+                      <td>待审核</td>
+                    <elseif condition="$ceInfo.type eq 1"/>
+                    <tr>
+                      <td></td>
+                      <td style="color:green">审核成功</td>
+                    </tr>
+                    <elseif condition="$ceInfo.type eq 2" />
+                    <tr>
+                      <td></td>
+                      <td style="color:red"><button type="submit" name="sub" value="del" class="btn">重新审核</button></td>
+                    </tr>
+                    </if>         
+            </table>        
+           </form>
+         </div>
+<else/>
+<div class="panel panel-default" >
+           <ul class="nav nav-tabs nav-justified">
+              <li><a href="ziliao.html">个人资料</a></li>
+               <li><a href="fabu.html">发布的商品</a></li>
+               <li><a href="message.html">消息中心</a></li>
+               <li class="active"><a href="ce.html">认证信息</a></li>
+            </ul>
+         <form action="__MODULE__/User/ce" method="post" enctype="multipart/form-data">
+          <table class="table">
+                  <tr>
+                     <td align="right">真实姓名：</td> 
+                     <td><input type="text" class="form-control" name="name" id="name" placeholder="输入名字"></td>            
+                  </tr>
+                  <tr>
+                    <td align="right">学生学号：</td>
+                    <td><input type="text" class="form-control" name="stuId" id="stuId" placeholder="输入学号"></td>
+                  </tr>
+                    <tr>
+                      <td align="right">上传学生证图片</td>
+                      <td><input type="file" name="image" id="name"></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><button type="submit" name="sub" value="submit" class="btn">添加</button></td>
+                    </tr>           
+            </table>
+                    
+           </form>
+         </div>
+  </if>
+</block>

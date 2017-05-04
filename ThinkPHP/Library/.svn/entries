@@ -1,0 +1,40 @@
+9
+
+dir
+102
+https://192.168.118.222/svn/jian/ThinkPHP/Library
+https://192.168.118.222/svn/jian
+
+
+
+2015-11-29T12:00:46.580250Z
+68
+lingling
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f5490f20-07c4-1748-942a-ec6a360ec54d
+
+Behavior
+dir
+
+Org
+dir
+
+Think
+dir
+
+Vendor
+dir
+
